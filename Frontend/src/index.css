@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities
+{
+    .slow-spin{
+        animation: spin 55s linear infinite;
+        
+    }
+}
+
+
