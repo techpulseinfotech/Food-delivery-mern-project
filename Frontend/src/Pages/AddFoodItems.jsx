@@ -6,7 +6,7 @@ const [FoodName, setFoodName] = useState('');
 const [FoodDesc, setFoodDesc] = useState('');  
 const [FoodPrice, setFoodPrice] = useState('');
 const [FoodCategory, setFoodCategory] = useState('');
-const [FoodIngradients, setFoodIngradients] = useState('');
+const [FoodIngredients, setFoodIngredients] = useState('');
 const [FoodImage, setFoodImage] = useState(null);
 
 
@@ -19,7 +19,7 @@ const handleSubmit = async (e) => {
     formData.append('FoodDesc',FoodDesc);
     formData.append('FoodPrice',FoodPrice);
     formData.append('FoodCategory',FoodCategory);
-    formData.append('FoodIngradients',FoodIngradients);
+    formData.append('FoodIngredients',FoodIngredients);
     formData.append('FoodImage',FoodImage);
     
       const response = await axios.post('http://localhost:4000/add-food-item',formData);
@@ -29,7 +29,7 @@ const handleSubmit = async (e) => {
 setFoodName('');
 setFoodDesc('');
 setFoodCategory('');
-setFoodIngradients('');
+setFoodIngredients('');
 setFoodPrice('');
 setFoodImage('');
 
@@ -134,8 +134,8 @@ setFoodImage('');
               <textarea
                 id="ingredients"
                 name="ingredients"
-                value={FoodIngradients}
-                onChange={(e)=>setFoodIngradients(e.target.value)}
+                value={FoodIngredients}
+                onChange={(e)=>setFoodIngredients(e.target.value)}
                 required
                 rows="3"
                 

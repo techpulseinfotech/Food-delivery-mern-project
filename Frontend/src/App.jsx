@@ -10,6 +10,7 @@ import SignUp from './Pages/SignUp'
 import Login from './Pages/Login'
 import AddFoodItems from './Pages/AddFoodItems'
 import Bnr from './components/Bnr'
+import FoodItemDetails from './components/FoodItemDetails'
 function App() {
 
 
@@ -27,6 +28,8 @@ function App() {
   <Route  path='/add-food-item' element={<AddFoodItems></AddFoodItems>} />
   <Route  path='/signUp' element={<SignUp></SignUp>} />
   <Route  path='/login' element={<Login></Login>} />
+  <Route  path='/food-item-details/:id' element={<FoodItemDetails></FoodItemDetails>} />
+
 </Routes>
 
 

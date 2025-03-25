@@ -6,7 +6,7 @@ function FoodCard({data}) {
 
 
     <>
-    <Link>
+    <Link to={`/food-item-details/${data._id}`}>
     <div className='bg-zinc-800 rounded px-4 flex flex-col text-white  '>
 
       <div className='bg-zinc-900 rounded items-center flex justify-center'>
@@ -21,8 +21,7 @@ function FoodCard({data}) {
 
       </div>
       
-      <Link className='bg-yellow-400 py-2 text-zinc-900 px-4 rounded-sm mt-4 text-center'>Add to Cart</Link>
-
+     
 
     </div>
     </Link>

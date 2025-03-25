@@ -45,6 +45,7 @@ router.post('/add-food-item', upload.single('FoodImage'), async (req, res) => {
 
 router.get('/get-food-item', async (req, res) => {
     try {
+        
         const data = await FoodItem.find();
         return res.status(200).json({ data });
 
@@ -53,5 +54,37 @@ router.get('/get-food-item', async (req, res) => {
         return res.status(500).json({ Message: "Internal Server Error!" });
     }
 });
+
+
+router.get('/get-food-item-details/:id', async (req, res) => {
+    try {
+        const {id}= req.params;
+
+console.log(id);
+
+
+        const data = await FoodItem.findById(id);
+        
+
+        console.log(data);
+        
+        return res.status(200).json({ data:data });
+
+    } catch (error) {
+        console.error(error);
+        return res.status(500).json({ Message: "Internal Server Error!" });
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
 
 module.exports = router;
