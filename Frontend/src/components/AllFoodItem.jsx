@@ -8,7 +8,7 @@ function AllFoodItem() {
     useEffect(() => {
         const getFoodItem = async () => {
             try {
-                const response = await axios.get("http://localhost:4000/get-food-item");
+                const response = await axios.get("http://localhost:4000/recently-added");
                 setFoodItems(response.data.data);
             } catch (error) {
                 console.error(error);

@@ -56,6 +56,19 @@ router.get('/get-food-item', async (req, res) => {
 });
 
 
+router.get('/recently-added', async (req, res) => {
+    try {
+        
+        const data = await FoodItem.find().sort({createdAt:-1}).limit(8);
+        return res.status(200).json({ data });
+
+    } catch (error) {
+        console.error(error);
+        return res.status(500).json({ Message: "Internal Server Error!" });
+    }
+});
+
+
 router.get('/get-food-item-details/:id', async (req, res) => {
     try {
         const {id}= req.params;

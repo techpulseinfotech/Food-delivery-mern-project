@@ -7,7 +7,7 @@ function FoodCard({data}) {
 
     <>
     <Link to={`/food-item-details/${data._id}`}>
-    <div className='bg-zinc-800 rounded px-4 flex flex-col text-white  '>
+    <div className='bg-zinc-800 rounded px-4 py-4 flex flex-col text-white  '>
 
       <div className='bg-zinc-900 rounded items-center flex justify-center'>
       <img src={`http://localhost:4000/uploads/${data.FoodImage}`} alt={data.FoodName} className='h-[25vh]' />
